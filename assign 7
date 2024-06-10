@@ -1,0 +1,56 @@
+1. Regular Expression (regex) engine is responsible for regex in python.regex is used to match specific set of characters or integers.The re module provides the functions and methods needed to create and work with regex objects, enabling pattern matching and string manipulation based on specified patterns.
+
+2. Raw strings often appear in regex objects to simplify the definition of regular expressions and avoid common pitfalls associated with escape sequences in normal string literals. In Python, raw strings are prefixed with an r (e.g., r"pattern"), which tells the interpreter to treat backslashes (\) as literal characters rather than escape characters.
+3. The search() method in Python's re module is used to search for a pattern within a given string. The return value of the search() method is a Match object if the pattern is found, and None if the pattern is not found.
+
+4. 
+From a Match object in Python, you can get the actual strings that match the pattern using the group() method. The group() method returns the part of the string where there was a match.
+group(): Returns the entire match.
+group(n): Returns the nth group from the match (groups are defined by parentheses in the regex pattern).
+
+
+
+5. Group 0: This represents the entire match, which includes everything matched by the regular expression.
+Group 1: This covers the first set of parentheses (\d\d\d). It captures the first three digits.
+Group 2: This covers the second set of parentheses (\d\d\d-\d\d\d\d). It captures the rem
+
+6.   
+In regular expressions, certain characters like parentheses () and periods . have special meanings. Parentheses are used for grouping, and periods match any single character except a newline. If you want to match these characters literally, you need to escape them using a backslash \.
+
+7.  The behavior of the findall() method in Python's re module depends on the presence of capturing groups in the regular expression pattern. Here's how it works:
+
+No Capturing Groups: If the regular expression pattern does not contain any capturing groups (parentheses ()), findall() returns a list of strings, where each string is a match of the pattern.
+
+8. In regular expressions, the | character is known as the "alternation" or "or" operator. It allows you to match one pattern or another. Essentially, it works like a logical OR, meaning it will match the pattern on the left side or the pattern on the right side of the |.
+
+Example
+Here's a simple example to illustrate the use of the | character in regular expressions:
+
+9. In regular expressions, the . (period) character is a special metacharacter that stands for any single character except a newline (\n). This means it can match any letter, digit, punctuation mark, or other symbol in the text being searched.
+
+10. In regular expressions, the + and * characters are quantifiers that specify how many times the preceding element can appear in the input string.
+
+The + Quantifier
+Meaning: The + quantifier matches one or more occurrences of the preceding element.
+Syntax: x+ matches one or more occurrences of x.
+Behavior: It requires at least one occurrence of the element to match, but it can match as many as possible.
+
+11. In regular expressions, {4} and {4,5} are quantifiers that specify the exact number of occurrences of the preceding element.
+
+{4} Quantifier
+Meaning: The {4} quantifier matches exactly four occurrences of the preceding element.
+Syntax: x{4} matches exactly four occurrences of x.
+Behavior: It requires exactly four occurrences of the element to match.
+
+12. In regular expressions, \d, \w, and \s are shorthand character classes that represent certain types of characters:
+
+\d: Matches any digit (0-9).
+\w: Matches any alphanumeric character (a-z, A-Z, 0-9, and underscore _).
+\s: Matches any whitespace character (space, tab, newline.
+
+13. n regular expressions, \D, \W, and \S are shorthand character classes that represent the negation of \d, \w, and \s respectively. They match any character that is not a digit, alphanumeric character, or whitespace character, respectively.
+
+\D: Matches any character that is not a digit (equivalent to [^0-9]).
+\W: Matches any character that is not a word character (equivalent to [^a-zA-Z0-9_]).
+\S: Matches any character that is not a whitespace character (equivalent to [^\s]).
+
