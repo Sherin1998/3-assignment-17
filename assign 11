@@ -1,0 +1,64 @@
+1. An assert statement that throws an AssertionError if the variable spam is a negative integer can be written as follows:
+
+2. 3. An assert statement that triggers an AssertionError if the variables `eggs` and `bacon` contain strings that are the same as each other, even if their cases are different, can be written as follows:
+
+   ```python
+   assert eggs.lower() != bacon.lower(), "eggs and bacon should not be the same"
+   ```
+
+   This assert statement will raise an AssertionError if the lowercase versions of `eggs` and `bacon` are equal, indicating that the strings are the same regardless of case.
+
+4. In order to call `logging.debug()`, your software must have the following two lines:
+
+   ```python
+   import logging
+   logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
+   ```
+
+   The first line imports the `logging` module, and the second line configures the logging module to enable debug messages.
+
+5. To have `logging.debug()` send a logging message to a file named `programLog.txt`, you need the same two lines as above, but with an additional parameter `filename` specified in the `basicConfig()` function:
+
+   ```python
+   import logging
+   logging.basicConfig(filename='programLog.txt', level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
+   ```
+
+   This will log debug messages to the specified file `programLog.txt`.
+
+6. The five levels of logging in Python, from most severe to least severe, are:
+
+   - `CRITICAL`: Critical errors that may lead to application failure.
+   - `ERROR`: Errors that should be addressed but do not cause the application to fail.
+   - `WARNING`: Warnings that indicate potential issues that should be watched.
+   - `INFO`: Informational messages that describe the progress of the application at a high level.
+   - `DEBUG`: Detailed messages useful for debugging purposes, providing detailed information about the application's state.
+
+   These levels allow developers to control the verbosity of the logging output based on the severity of the messages.
+
+
+7. 7. To disable all logging messages, you can set the logging level to a value that effectively disables all logging messages. One way to do this is to set the logging level to `logging.CRITICAL + 1`, which effectively disables all logging messages:
+
+   ```python
+   import logging
+   logging.disable(logging.CRITICAL + 1)
+   ```
+
+   After this code is executed, all logging calls, regardless of their level, will be ignored and will not produce any output.
+
+8. Using logging messages is better than using `print()` for several reasons:
+   - Logging provides different levels of severity (DEBUG, INFO, WARNING, ERROR, CRITICAL), allowing you to categorize messages based on their importance.
+   - Logging messages can be easily disabled or modified by changing the logging configuration, without modifying the code.
+   - Logging messages can be directed to different outputs (console, file, etc.) based on the configuration, providing flexibility in how messages are handled.
+   - Logging allows for more structured and detailed messages, including timestamps, log levels, and other contextual information.
+
+9. In a debugger, the Step Over button is used to execute the current line of code and move to the next line. If the current line contains a function call, the function is executed, but the debugger does not step into the function and instead moves to the next line in the current context.
+
+   The Step In button is used to step into a function call, moving the debugger to the first line of the called function, allowing you to debug the function's code.
+
+   The Step Out button is used to continue execution until the current function returns, then stops at the line that called the function, allowing you to return to the caller's context.
+
+10. After clicking Continue, the debugger will stop when it encounters the next breakpoint or when the program completes execution.
+
+11. A breakpoint is a point in your code where the debugger will pause execution, allowing you to inspect the program's state, variables, and control flow at that point. Breakpoints are useful for debugging complex code or for stopping execution at specific points to analyze the program's behavior.
+
