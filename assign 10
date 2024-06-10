@@ -1,0 +1,23 @@
+1. shutil.copy() and shutil.copytree() are both functions from the shutil module in Python used for copying files and directories, respectively. Here's how they differ:
+
+shutil.copy(src, dst):
+
+This function is used to copy a single file from the src path to the dst path.
+If dst specifies a directory, the file will be copied into that directory with the same base name.
+If dst specifies a file path, the file will be copied to that exact path.
+Usage: shutil.copy('source/file.txt', 'destination/file.txt')
+shutil.copytree(src, dst):
+
+This function is used to recursively copy an entire directory tree from src to dst.
+If dst directory does not exist, it will be created.
+If dst directory already exists, the contents of src will be copied into dst, creating new files and overwriting existing files if they have the same name.
+Usage: shutil.copytree('source_dir', 'destination_dir')
+
+2. The function used to rename files in Python is os.rename(src, dst) from the os module. It renames the file or directory at path src to dst.
+3. The difference between the delete functions in the send2trash and shutil modules is how they handle file deletion:
+
+send2trash: The send2trash module sends files to the operating system's trash or recycle bin instead of permanently deleting them. This allows files to be recovered if needed. The function send2trash.send2trash(path) is used to send a file or directory to the trash.
+
+4. The equivalent method in ZipFile objects to File objects' open() method is ZipFile() itself. When you call ZipFile(filename, mode),
+
+5.  Here's a program that searches a folder tree for files with a certain file extension (e.g., .pdf or .jpg) and copies them to a new folder:
