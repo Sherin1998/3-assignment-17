@@ -1,0 +1,13 @@
+1. To add the current date to the text file today.txt as a string, you can use the following Python code:This code snippet first imports the date class from the datetime module. Then, it opens the file today.txt in write mode ('w') and writes the current date as a string using the write() method. The str() function is used to convert the date.today() object to a string.
+
+2. To read the text file today.txt into the string today_string, you can use the following Python code:This code snippet opens the file today.txt in read mode ('r') and reads its contents into the string today_string using the read() method. The entire contents of the file are read as a single string.
+3. To list the files in your current directory, you can use the os module:
+4. To create a list of all files in your parent directory (assuming at least five files are available), you can use the following code:
+5.  To determine the day of the week of your day of birth, you can use the strftime() method to format the date object:
+
+python
+Copy code
+print(dob.strftime('%A'))
+This code snippet uses the format %A, which returns the full weekday name.
+
+To calculate when you will be (or when you were) 10,000 days old, you can use the timedelta class from the datetime module:
