@@ -1,0 +1,101 @@
+1. class Thing:
+    pass
+
+print(Thing)
+
+example = Thing()
+print(example)
+
+When you run this code, the output will show that both Thing and example are objects of the class Thing. They will have different memory addresses, but conceptually they are the same type of object. The printed values will look something like <class '__main__.Thing'>
+for the class Thing and <__main__.Thing object at 0x...> for the example object, where 0x... is the memory address where the object is stored.
+
+
+2.  3. To make a class called `Thing3` and assign the value `'xyz'` to an instance attribute called `letters`, you can use the following code:
+
+   ```python
+   class Thing3:
+       def __init__(self):
+           self.letters = 'xyz'
+
+   thing = Thing3()
+   print(thing.letters)
+   ```
+
+   In this example, the `__init__` method is used to initialize the `letters` attribute of each `Thing3` object to `'xyz'`. You do need to create an object (`thing`) from the class `Thing3` to access and print the `letters` attribute.
+
+4. To create an `Element` class with the instance attributes `name`, `symbol`, and `number`, and then create a class object with the values `'Hydrogen'`, `'H'`, and `1`, you can use the following code:
+
+   class Element:
+       def __init__(self, name, symbol, number):
+           self.name = name
+           self.symbol = symbol
+           self.number = number
+
+   hydrogen = Element('Hydrogen', 'H', 1)
+
+   This code defines the `Element` class with an `__init__` method that initializes the `name`, `symbol`, and `number` attributes of each `Element` object. Then, it creates an `Element` object called `hydrogen` with the values `'Hydrogen'`, `'H'`, and `1`.
+
+5. To make a dictionary with keys and values for an `Element` object and then create an object called `hydrogen` from the `Element` class using this dictionary, you can use the following code:
+
+   element_dict = {'name': 'Hydrogen', 'symbol': 'H', 'number': 1}
+   hydrogen = Element(**element_dict)
+  
+
+   This code creates a dictionary `element_dict` with keys `'name'`, `'symbol'`, and `'number'`, and values `'Hydrogen'`, `'H'`, and `1`, respectively. Then, it creates an `Element` object called `hydrogen` using the dictionary unpacking operator `**` to pass the dictionary as keyword arguments to the `Element` class constructor.
+
+
+
+6.  9. To define three classes `Bear`, `Rabbit`, and `Octothorpe`, each with a method `eats()` that returns a specific food item, and then create objects from each class to print what they eat, you can use the following code:
+
+   ```python
+   class Bear:
+       def eats(self):
+           return 'berries'
+
+   class Rabbit:
+       def eats(self):
+           return 'clover'
+
+   class Octothorpe:
+       def eats(self):
+           return 'campers'
+
+   bear = Bear()
+   rabbit = Rabbit()
+   octothorpe = Octothorpe()
+
+   print(f'Bear eats: {bear.eats()}')
+   print(f'Rabbit eats: {rabbit.eats()}')
+   print(f'Octothorpe eats: {octothorpe.eats()}')
+   ```
+
+   This code defines the `Bear`, `Rabbit`, and `Octothorpe` classes with an `eats()` method that returns `'berries'`, `'clover'`, and `'campers'` respectively. Then, it creates objects from each class and prints what each one eats.
+
+10. To define the `Laser`, `Claw`, and `SmartPhone` classes, each with a method `does()` that returns a specific action, and then define the `Robot` class that has one instance of each of these components with a `does()` method that prints what each component does, you can use the following code:
+
+    class Laser:
+        def does(self):
+            return 'disintegrate'
+
+    class Claw:
+        def does(self):
+            return 'crush'
+
+    class SmartPhone:
+        def does(self):
+            return 'ring'
+
+    class Robot:
+        def __init__(self):
+            self.laser = Laser()
+            self.claw = Claw()
+            self.smartphone = SmartPhone()
+
+        def does(self):
+            print(f'Laser: {self.laser.does()}, Claw: {self.claw.does()}, SmartPhone: {self.smartphone.does()}')
+
+    robot = Robot()
+    robot.does()
+    ```
+
+    This code defines the `Laser`, `Claw`, and `SmartPhone` classes with a `does()` method that returns `'disintegrate'`, `'crush'`, and `'ring'` respectively. Then, it defines the `Robot` class with instances of each component and a `does()` method that prints what each component does. Finally, it creates a `Robot` object and calls its `does()` method to print the actions of its components.
