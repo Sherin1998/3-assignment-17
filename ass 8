@@ -1,0 +1,17 @@
+1. No, the Python Standard Library is not included with PyInputPlus. PyInputPlus is a third-party library that provides additional functionality for taking user inputs, such as validation and retry mechanisms, which are not included in the standard library's input() function.
+
+2. PyInputPlus is commonly imported with import pyinputplus as pypi to provide a shorter and more convenient alias for the module. Using as pypi allows you to refer to the module using the shorter name pypi in your code, which can make your code more readable and easier to type.
+
+3. inputInt() and inputFloat() are functions provided by PyInputPlus for specifically taking integer and float inputs from the user, respectively. They are similar in usage but differ in the type of input they accept and the validation they perform:
+inputInt(prompt=None, default=None, limit=None, strip=True): This function prompts the user for input and expects an integer value. It will keep asking for input until the user enters a valid integer. It accepts an optional prompt message, a default value if no input is provided, a limit for the number of retries, and a flag to indicate whether to strip whitespace from the input.
+
+inputFloat(prompt=None, default=None, limit=None, strip=True): This function prompts the user for input and expects a floating-point value. Similar to inputInt(), it will keep asking for input until the user enters a valid float. It also accepts an optional prompt message, a default value if no input is provided, a limit for the number of retries, and a flag to indicate whether to strip whitespace from the input.
+
+
+4.  The allowRegexes and blockRegexes keyword arguments in PyInputPlus are used to specify regular expressions that are either allowed or blocked for user input. These arguments accept a list of regular expression strings. When using allowRegexes, only inputs that match one of the regular expressions will be accepted. When using blockRegexes, inputs that match any of the regular expressions will be rejected.
+
+If a blank input is entered three times with inputStr(limit=3), PyInputPlus will raise a pyinputplus.RetryLimitException after the third attempt. This exception indicates that the maximum number of retries (specified by the limit parameter) has been reached without receiving a valid input.
+
+If a blank input is entered three times with inputStr(limit=3, default='hello'), PyInputPlus will return the default value 'hello' after the third attempt. This is because the default parameter specifies a value to return if the user does not provide any input. In this case, since the user entered a blank input three times, the default value is returned.
+
+
