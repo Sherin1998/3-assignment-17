@@ -1,0 +1,276 @@
+Let's carefully solve each part of the problem again to ensure correctness.
+
+### 1. Find the range \( R_X \) of the random variable \( X \).
+
+The range \( R_X \) is the set of possible values that \( X \) can take. From the given PMF:
+
+\[ P_X(x) = \begin{cases}
+0.1 & \text{for } x = 0.2 \\
+0.2 & \text{for } x = 0.4 \\
+0.2 & \text{for } x = 0.5 \\
+0.3 & \text{for } x = 0.8 \\
+0.2 & \text{for } x = 1 \\
+0 & \text{otherwise}
+\end{cases} \]
+
+So, the range \( R_X \) is:
+\[ R_X = \{0.2, 0.4, 0.5, 0.8, 1\} \]
+
+### 2. Find \( P(X \leq 0.5) \).
+
+\[ P(X \leq 0.5) \]
+This is the probability that \( X \) is less than or equal to 0.5. We sum the probabilities for \( x = 0.2, 0.4, \) and \( 0.5 \):
+
+\[ P(X \leq 0.5) = P(X = 0.2) + P(X = 0.4) + P(X = 0.5) \]
+\[ P(X \leq 0.5) = 0.1 + 0.2 + 0.2 = 0.5 \]
+
+### 3. Find \( P(0.25 < X < 0.75) \).
+
+\[ P(0.25 < X < 0.75) \]
+This is the probability that \( X \) is between 0.25 and 0.75. From the given PMF, the values in this range are \( x = 0.4 \) and \( x = 0.5 \):
+
+\[ P(0.25 < X < 0.75) = P(X = 0.4) + P(X = 0.5) \]
+\[ P(0.25 < X < 0.75) = 0.2 + 0.2 = 0.4 \]
+
+### 4. Find \( P(X = 0.2 \mid X < 0.6) \).
+
+\[ P(X = 0.2 \mid X < 0.6) \]
+This is the conditional probability that \( X \) is 0.2 given that \( X \) is less than 0.6.
+
+First, we find \( P(X < 0.6) \):
+\[ P(X < 0.6) = P(X = 0.2) + P(X = 0.4) + P(X = 0.5) \]
+\[ P(X < 0.6) = 0.1 + 0.2 + 0.2 = 0.5 \]
+
+Now, we use the definition of conditional probability:
+\[ P(X = 0.2 \mid X < 0.6) = \frac{P(X = 0.2 \cap X < 0.6)}{P(X < 0.6)} \]
+Since \( X = 0.2 \) is included in \( X < 0.6 \):
+\[ P(X = 0.2 \mid X < 0.6) = \frac{P(X = 0.2)}{P(X < 0.6)} \]
+\[ P(X = 0.2 \mid X < 0.6) = \frac{0.1}{0.5} = 0.2 \]
+
+So, the answers are:
+1. \( R_X = \{0.2, 0.4, 0.5, 0.8, 1\} \)
+2. \( P(X \leq 0.5) = 0.5 \)
+3. \( P(0.25 < X < 0.75) = 0.4 \)
+4. \( P(X = 0.2 \mid X < 0.6) = 0.2 \)
+
+
+
+
+
+
+2.  Let's solve each part of this problem involving two fair dice.
+
+### 1. Find \( R_X \), \( R_Y \), and the PMFs of \( X \) and \( Y \).
+
+#### \( R_X \) and \( R_Y \):
+Since both \( X \) and \( Y \) represent the outcome of rolling a fair six-sided die, the possible values for each die are:
+\[ R_X = R_Y = \{1, 2, 3, 4, 5, 6\} \]
+
+#### PMFs of \( X \) and \( Y \):
+Since the dice are fair, the probability of each outcome is the same:
+\[ P(X = x) = P(Y = y) = \frac{1}{6} \quad \text{for } x, y \in \{1, 2, 3, 4, 5, 6\} \]
+
+### 2. Find \( P(X = 2, Y = 6) \).
+
+Since \( X \) and \( Y \) are independent:
+\[ P(X = 2, Y = 6) = P(X = 2) \cdot P(Y = 6) = \frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36} \]
+
+### 3. Find \( P(X > 3 \mid Y = 2) \).
+
+We need the conditional probability \( P(X > 3 \mid Y = 2) \). Since \( Y = 2 \) doesn't affect the fairness of \( X \):
+\[ P(X > 3 \mid Y = 2) = P(X > 3) \]
+\[ P(X > 3) = P(X = 4) + P(X = 5) + P(X = 6) \]
+\[ P(X > 3) = \frac{1}{6} + \frac{1}{6} + \frac{1}{6} = \frac{3}{6} = \frac{1}{2} \]
+
+### 4. If \( Z = X + Y \), find the range and PMF of \( Z \).
+
+#### Range of \( Z \):
+The minimum value of \( Z \) is \( 1 + 1 = 2 \) and the maximum value is \( 6 + 6 = 12 \). Thus,
+\[ R_Z = \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\} \]
+
+#### PMF of \( Z \):
+The probability mass function for \( Z \) can be determined by counting the number of ways each sum can be obtained and dividing by the total number of outcomes (36):
+
+- \( P(Z = 2) = \frac{1}{36} \) (1+1)
+- \( P(Z = 3) = \frac{2}{36} = \frac{1}{18} \) (1+2, 2+1)
+- \( P(Z = 4) = \frac{3}{36} = \frac{1}{12} \) (1+3, 2+2, 3+1)
+- \( P(Z = 5) = \frac{4}{36} = \frac{1}{9} \) (1+4, 2+3, 3+2, 4+1)
+- \( P(Z = 6) = \frac{5}{36} \) (1+5, 2+4, 3+3, 4+2, 5+1)
+- \( P(Z = 7) = \frac{6}{36} = \frac{1}{6} \) (1+6, 2+5, 3+4, 4+3, 5+2, 6+1)
+- \( P(Z = 8) = \frac{5}{36} \) (2+6, 3+5, 4+4, 5+3, 6+2)
+- \( P(Z = 9) = \frac{4}{36} = \frac{1}{9} \) (3+6, 4+5, 5+4, 6+3)
+- \( P(Z = 10) = \frac{3}{36} = \frac{1}{12} \) (4+6, 5+5, 6+4)
+- \( P(Z = 11) = \frac{2}{36} = \frac{1}{18} \) (5+6, 6+5)
+- \( P(Z = 12) = \frac{1}{36} \) (6+6)
+
+### 5. Find \( P(X = 4 \mid Z = 8) \).
+
+To find \( P(X = 4 \mid Z = 8) \), we use the definition of conditional probability:
+\[ P(X = 4 \mid Z = 8) = \frac{P(X = 4, Z = 8)}{P(Z = 8)} \]
+
+First, determine \( P(X = 4, Z = 8) \):
+If \( Z = 8 \) and \( X = 4 \), then \( Y \) must be \( 4 \) (since \( Z = X + Y \)).
+\[ P(X = 4, Z = 8) = P(X = 4, Y = 4) = P(X = 4) \cdot P(Y = 4) = \frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36} \]
+
+Next, determine \( P(Z = 8) \):
+\[ P(Z = 8) = \frac{5}{36} \]
+
+Now, calculate the conditional probability:
+\[ P(X = 4 \mid Z = 8) = \frac{P(X = 4, Z = 8)}{P(Z = 8)} = \frac{\frac{1}{36}}{\frac{5}{36}} = \frac{1}{5} \]
+
+### Summary of Answers:
+1. \( R_X = R_Y = \{1, 2, 3, 4, 5, 6\} \)
+   \[ P(X = x) = P(Y = y) = \frac{1}{6} \]
+2. \( P(X = 2, Y = 6) = \frac{1}{36} \)
+3. \( P(X > 3 \mid Y = 2) = \frac{1}{2} \)
+4. \( R_Z = \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\} \)
+   \[ P(Z = 2) = \frac{1}{36}, P(Z = 3) = \frac{1}{18}, P(Z = 4) = \frac{1}{12}, P(Z = 5) = \frac{1}{9}, P(Z = 6) = \frac{5}{36}, P(Z = 7) = \frac{1}{6}, P(Z = 8) = \frac{5}{36}, P(Z = 9) = \frac{1}{9}, P(Z = 10) = \frac{1}{12}, P(Z = 11) = \frac{1}{18}, P(Z = 12) = \frac{1}{36} \]
+5. \( P(X = 4 \mid Z = 8) = \frac{1}{5} \)
+
+
+
+
+
+
+
+
+3.  ### Solution Summary:
+
+1. **Problem Definition:**
+   - 20 multiple-choice questions, each with 4 options.
+   - The student knows 10 answers and guesses 10.
+
+2. **Variables:**
+   - Let \( X \) be the total score.
+   - \( Y \) is the number of correct guesses out of 10, \( Y \sim \text{Binomial}(10, \frac{1}{4}) \).
+
+3. **PMF of \( X \):**
+   - \( X = 10 + Y \), \( Y \) ranges from 0 to 10.
+   - PMF: \( P(X = x) = \binom{10}{x-10} \left(\frac{1}{4}\right)^{x-10} \left(\frac{3}{4}\right)^{20-x} \), for \( x = 10, 11, \ldots, 20 \).
+
+4. **Calculating \( P(X > 15) \):**
+   - \( P(X > 15) = \sum_{x=16}^{20} P(X = x) \)
+   - \( P(X = 16) = 210 \times \left(\frac{1}{4}\right)^6 \times \left(\frac{3}{4}\right)^4 \approx 0.0162 \)
+   - \( P(X = 17) = 120 \times \left(\frac{1}{4}\right)^7 \times \left(\frac{3}{4}\right)^3 \approx 0.0031 \)
+   - \( P(X = 18) = 45 \times \left(\frac{1}{4}\right)^8 \times \left(\frac{3}{4}\right)^2 \approx 0.0004 \)
+   - \( P(X = 19) = 10 \times \left(\frac{1}{4}\right)^9 \times \left(\frac{3}{4}\right)^1 \approx 0.00003 \)
+   - \( P(X = 20) = 1 \times \left(\frac{1}{4}\right)^{10} \approx 0.000001 \)
+
+   Sum of these probabilities:
+   \[ P(X > 15) \approx 0.0162 + 0.0031 + 0.0004 + 0.00003 + 0.000001 \approx 0.0197 \]
+
+### Final Result:
+\[ P(X > 15) \approx 0.0197 \]
+The probability that the student scores more than 15 correct answers is approximately \( 0.0197 \) or \( 1.97\% \).
+
+
+
+
+5.### Problem:
+The number of students arriving at a college is a Poisson random variable with an average of 10 students per hour. We need to find \( P(10 < Y \leq 15) \) for the interval from 10 am to 11:30 am.
+
+### Solution:
+1. **Determine Mean (\( \lambda \)) for 1.5 hours:**
+   \[
+   \lambda = 10 \times 1.5 = 15
+   \]
+   Thus, \( Y \sim \text{Poisson}(15) \).
+
+2. **Calculate Probability:**
+   \[
+   P(10 < Y \leq 15) = P(Y \leq 15) - P(Y \leq 10)
+   \]
+
+3. **Using Python (scipy.stats):**
+
+   ```python
+   from scipy.stats import poisson
+
+   lambda_val = 15
+   P_Y_leq_15 = poisson.cdf(15, lambda_val)
+   P_Y_leq_10 = poisson.cdf(10, lambda_val)
+
+   P_10_lt_Y_leq_15 = P_Y_leq_15 - P_Y_leq_10
+   P_10_lt_Y_leq_15
+   ```
+
+4. **Result:**
+   \[
+   P(10 < Y \leq 15) \approx 0.834
+   \]
+
+### Final Result:
+The probability that more than 10 but no more than 15 students arrive between 10 am and 11:30 am is approximately 0.834 or 83.4%.
+
+
+
+
+
+
+5. Given two independent random variables \( X \sim \text{Poisson}(\alpha) \) and \( Y \sim \text{Poisson}(\beta) \), define a new random variable \( Z = X + Y \).
+
+### Finding the PMF of \( Z \):
+- **Property of Poisson Distribution:** The sum of two independent Poisson random variables is also a Poisson random variable.
+- **Parameter of \( Z \):** \( Z \) will follow a Poisson distribution with parameter \( \alpha + \beta \).
+
+### PMF of \( Z \):
+\[ Z \sim \text{Poisson}(\alpha + \beta) \]
+
+### Probability Mass Function (PMF) of \( Z \):
+\[ P(Z = k) = \frac{(\alpha + \beta)^k e^{-(\alpha + \beta)}}{k!} \]
+for \( k = 0, 1, 2, \ldots \)
+
+### Summary:
+The PMF of the new random variable \( Z = X + Y \) is:
+\[ P(Z = k) = \frac{(\alpha + \beta)^k e^{-(\alpha + \beta)}}{k!}, \; \text{where } k \in \{0, 1, 2, \ldots\} \]
+
+
+
+
+6.  Given:
+- There are 100 men on a ship.
+- \( X_i \) is the weight of the \( i \)-th man on the ship.
+- The weights \( X_i \) are independent and identically distributed (i.i.d.).
+- \( \mathbb{E}[X_i] = \mu = 170 \)
+- \( \sigma_{X_i} = \sigma = 30 \)
+
+We need to find the probability that the total weight of the men on the ship exceeds 18,000.
+
+### Steps:
+
+1. **Total Weight of Men:**
+   Let \( T \) be the total weight of the 100 men:
+   \[ T = \sum_{i=1}^{100} X_i \]
+
+2. **Expected Total Weight:**
+   Since \( X_i \) are i.i.d.:
+   \[ \mathbb{E}[T] = \mathbb{E}\left[\sum_{i=1}^{100} X_i \right] = 100 \cdot \mathbb{E}[X_i] = 100 \cdot 170 = 17000 \]
+
+3. **Variance of Total Weight:**
+   \[ \text{Var}(T) = \sum_{i=1}^{100} \text{Var}(X_i) = 100 \cdot \text{Var}(X_i) = 100 \cdot (30^2) = 90000 \]
+
+4. **Standard Deviation of Total Weight:**
+   \[ \sigma_T = \sqrt{\text{Var}(T)} = \sqrt{90000} = 300 \]
+
+5. **Finding the Probability \( P(T > 18000) \):**
+
+   Using the Central Limit Theorem, for large \( n \), the distribution of \( T \) can be approximated by a normal distribution \( \mathcal{N}(\mu_T, \sigma_T^2) \):
+   \[ T \sim \mathcal{N}(17000, 300^2) \]
+
+   To find \( P(T > 18000) \):
+   \[ P(T > 18000) = P\left( \frac{T - 17000}{300} > \frac{18000 - 17000}{300} \right) \]
+   \[ P(T > 18000) = P\left( Z > \frac{1000}{300} \right) \]
+   \[ P(T > 18000) = P\left( Z > \frac{10}{3} \right) \]
+   \[ P(T > 18000) = P(Z > 3.33) \]
+
+   Where \( Z \) is a standard normal variable.
+
+6. **Using Standard Normal Distribution:**
+   Using standard normal distribution tables or a calculator:
+   \[ P(Z > 3.33) \]
+
+   This value is very small. Looking it up in the Z-table:
+   \[ P(Z > 3.33) \approx 0.00043 \]
+
+### Answer:
+The probability that the total weight of the men on the ship exceeds 18,000 is approximately \( 0.00043 \).
