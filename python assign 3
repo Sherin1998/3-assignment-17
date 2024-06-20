@@ -1,0 +1,30 @@
+An abstract superclass is a class that is designed to be inherited by other classes but is not intended to be instantiated on its own. It provides a common interface and often some shared functionality for its subclasses, but it is abstract in the sense that it does not provide a complete implementation. Instead, it may include abstract methods that must be implemented by its subclasses.
+
+Key Concepts
+Abstract Class:
+
+An abstract class cannot be instantiated directly. It serves as a blueprint for other classes.
+It may contain abstract methods (methods without implementation) that must be defined in its subclasses.
+It can also contain concrete methods (methods with implementation) that can be inherited by subclasses.
+Abstract Methods:
+
+Abstract methods are declared in the abstract class but do not have an implementation. Subclasses must provide the implementation for these methods.
+In languages like Java, abstract methods are declared using the abstract keyword.
+In Python, abstract methods are typically declared using the abc module's @abstractmethod decorator.
+Subclassing:
+
+Classes that inherit from the abstract superclass are called subclasses.
+Subclasses provide specific implementations for the abstract methods defined in the abstract superclass.
+Subclasses can also override existing concrete methods or add new methods and attributes.
+
+
+
+
+When a class statement's top level contains a basic assignment statement, it defines a class attribute. Class attributes are variables that are shared among all instances of the class. They are defined within the class body but outside any methods.
+
+Key Points
+Class Attributes:
+
+Shared Across All Instances: Class attributes are shared across all instances of the class. Any change made to a class attribute affects all instances of the class.
+Accessed Using Class Name or Instance: Class attributes can be accessed using the class name or any instance of the class. This allows for both global access (via the class name) and instance-specific access (via the instance name).
+Common Data Storage: Class attributes can be used to store constants, default values, or any data that should be common to all instances. This helps in maintaining a single source of truth for data that is consistent across all instances.
